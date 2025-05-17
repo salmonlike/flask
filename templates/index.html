@@ -1,10 +1,52 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
-    <title>My Flask Site</title>
+    <meta charset="UTF-8">
+    <title>My Business</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h1>Hello from Flask!</h1>
-    <p>これが最初のページです。</p>
+    <header>
+        <div class="container">
+            <h1>My Business</h1>
+            <nav>
+                <a href="#about">会社概要</a>
+                <a href="#services">事業紹介</a>
+                <a href="#contact">お問い合わせ</a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2>会社概要</h2>
+            <p>私たちは革新的なサービスで社会に貢献する企業です。</p>
+        </div>
+    </section>
+
+    <section id="services" class="section">
+        <div class="container">
+            <h2>事業紹介</h2>
+            <p>AI導入支援、営業コンサル、マーケティング自動化などを提供しています。</p>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>お問い合わせ</h2>
+            <form>
+                <input type="text" placeholder="お名前" required>
+                <input type="email" placeholder="メールアドレス" required>
+                <textarea placeholder="お問い合わせ内容" required></textarea>
+                <button type="submit">送信</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 My Business</p>
+        </div>
+    </footer>
 </body>
 </html>
