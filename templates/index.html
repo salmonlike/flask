@@ -2,51 +2,73 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>My Business</title>
+    <title>MyPath | 田村寛太</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
     <header>
-        <div class="container">
-            <h1>My Business</h1>
-            <nav>
-                <a href="#about">会社概要</a>
-                <a href="#services">事業紹介</a>
-                <a href="#contact">お問い合わせ</a>
-            </nav>
-        </div>
+        <img src="{{ url_for('static', filename='logo.png') }}" class="logo">
+        <nav>
+            <a href="#about">会社概要</a>
+            <a href="#services">事業紹介</a>
+            <a href="#gallery">ギャラリー</a>
+            <a href="#greeting">代表挨拶</a>
+            <a href="#contact">お問い合わせ</a>
+        </nav>
     </header>
 
-    <section id="about" class="section">
-        <div class="container">
+    <main>
+        <section id="hero">
+            <h1>MyPathへようこそ</h1>
+            <p>あなたの道を支えるパートナー</p>
+        </section>
+
+        <section id="about">
             <h2>会社概要</h2>
-            <p>私たちは革新的なサービスで社会に貢献する企業です。</p>
-        </div>
-    </section>
+            <p>私たちは語学と健康の両側面から人生をサポートする企業です。</p>
+        </section>
 
-    <section id="services" class="section">
-        <div class="container">
+        <section id="services">
             <h2>事業紹介</h2>
-            <p>AI導入支援、営業コンサル、マーケティング自動化などを提供しています。</p>
-        </div>
-    </section>
+            <h3>オンライン日本語教室</h3>
+            <p>世界中の学習者へ日本語教育を提供。</p>
+            <h3>マッサージ店</h3>
+            <p>心と体を癒すリラクゼーションサロン。</p>
+        </section>
 
-    <section id="contact" class="section">
-        <div class="container">
+        <section id="gallery">
+            <h2>ギャラリー</h2>
+            <img src="https://source.unsplash.com/800x400/?japan" alt="日本語教室">
+            <img src="https://source.unsplash.com/800x400/?massage" alt="マッサージ">
+        </section>
+
+        <section id="greeting">
+            <h2>代表挨拶</h2>
+            <p>はじめまして、田村寛太です。人と人のつながりを大切にしながら、お客様の人生に貢献できるサービスを目指しています。</p>
+        </section>
+
+        <section id="contact">
             <h2>お問い合わせ</h2>
-            <form>
-                <input type="text" placeholder="お名前" required>
-                <input type="email" placeholder="メールアドレス" required>
-                <textarea placeholder="お問い合わせ内容" required></textarea>
+            {% with messages = get_flashed_messages() %}
+              {% if messages %}
+                <ul class="flashes">
+                  {% for message in messages %}
+                    <li>{{ message }}</li>
+                  {% endfor %}
+                </ul>
+              {% endif %}
+            {% endwith %}
+            <form method="post">
+                <input type="text" name="name" placeholder="お名前" required>
+                <input type="email" name="email" placeholder="メールアドレス" required>
+                <textarea name="message" placeholder="お問い合わせ内容" required></textarea>
                 <button type="submit">送信</button>
             </form>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2025 My Business</p>
-        </div>
+        <p>&copy; 2025 MyPath - 田村寛太</p>
     </footer>
 </body>
 </html>
