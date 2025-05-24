@@ -1,57 +1,96 @@
 /* ベース設定 */
 body {
-    font-family: sans-serif;
+    font-family: 'Helvetica Neue', sans-serif;
     margin: 0;
-    color: #333;
     background-color: #f9f9f9;
+    color: #333;
   }
   
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  /* ヘッダー */
   header {
-    background-color: #001f3f;
-    color: white;
-    padding: 10px 20px;
+    background-color: #001f3f; /* 紺色 */
+    color: #fff;
+  }
+  
+  header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
   
   header h1 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
   
-  nav ul {
+  header nav ul {
     list-style: none;
     display: flex;
     margin: 0;
     padding: 0;
   }
   
-  nav li {
+  header nav li {
     margin-left: 20px;
   }
   
-  nav a {
-    color: white;
+  header nav a {
+    color: #fff;
     text-decoration: none;
+    transition: opacity 0.3s;
   }
   
-  section {
+  header nav a:hover {
+    opacity: 0.7;
+  }
+  
+  /* ヒーロー */
+  #hero {
+    background: linear-gradient(135deg, #001f3f, #0074d9); /* 紺→青グラデーション */
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+  }
+  
+  #hero h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  #hero p {
+    font-size: 1.1rem;
+  }
+  
+  /* セクション共通 */
+  .section {
+    background-color: #fff;
+    margin: 40px 0;
     padding: 40px 20px;
-    max-width: 1000px;
-    margin: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
   }
   
-  h2 {
+  .section h2 {
+    color: #001f3f; /* 紺色 */
+    border-left: 4px solid #0074d9; /* 青いアクセント */
+    padding-left: 10px;
     margin-bottom: 10px;
   }
   
   .photo-placeholder {
     width: 100%;
     height: 200px;
-    background-color: black; /* 画像の代わりに黒ボックス */
-    margin-bottom: 20px;
+    background-color: #000; /* 黒い背景（後で写真を入れるところ） */
+    margin: 20px 0;
   }
   
+  /* フォーム */
   form {
     display: flex;
     flex-direction: column;
@@ -59,23 +98,32 @@ body {
   
   form input,
   form textarea {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     padding: 10px;
     font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
   }
   
   form button {
-    padding: 10px;
-    background-color: #0074d9;
-    color: white;
+    background-color: #0074d9; /* 青色 */
+    color: #fff;
     border: none;
+    padding: 12px;
+    border-radius: 4px;
     cursor: pointer;
+    transition: background-color 0.3s;
   }
   
+  form button:hover {
+    background-color: #005fa3; /* 濃い青色 */
+  }
+  
+  /* フッター */
   footer {
     background-color: #001f3f;
-    color: white;
+    color: #fff;
     text-align: center;
-    padding: 10px 0;
+    padding: 15px 0;
   }
   

@@ -2,50 +2,37 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>MyPath サイト</title>
+  <title>MyPath</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>MyPath</h1>
-    <nav>
-      <ul>
-        <li><a href="#about">会社概要</a></li>
-        <li><a href="#services">サービス</a></li>
-        <li><a href="#contact">お問い合わせ</a></li>
-      </ul>
-    </nav>
+    <div class="container">
+      <h1>MyPath</h1>
+      <nav>
+        <ul>
+          <li><a href="#about">会社概要</a></li>
+          <li><a href="#services">サービス</a></li>
+          <li><a href="#contact">お問い合わせ</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
   <section id="hero">
-    <div class="photo-placeholder"></div>
-    <h2>あなたの成長を支援するパートナー</h2>
-    <p>私たちは、あなたの挑戦を全力で応援します。</p>
+    <div class="hero-content">
+      <h2>あなたの成長を支援するパートナー</h2>
+      <p>挑戦を全力で応援します。</p>
+    </div>
   </section>
 
-  <section id="about">
-    <h2>会社概要</h2>
-    <p>MyPathは、企業や個人の成長を支援する会社です。</p>
+  <section id="about" class="section">
+    <div class="container">
+      <h2>会社概要</h2>
+      <p>MyPathは、企業や個人の成長を支援する会社です。</p>
+    </div>
   </section>
 
-  <section id="services">
-    <h2>サービス</h2>
-    <div class="photo-placeholder"></div>
-    <p>営業コンサルティング・AIツール開発・教育研修を提供します。</p>
-  </section>
-
-  <section id="contact">
-    <h2>お問い合わせ</h2>
-    <form method="post">
-      <input type="text" name="name" placeholder="お名前" required>
-      <input type="email" name="email" placeholder="メールアドレス" required>
-      <textarea name="message" placeholder="お問い合わせ内容" required></textarea>
-      <button type="submit">送信</button>
-    </form>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 MyPath. All rights reserved.</p>
-  </footer>
-</body>
-</html>
+  <section id="services" class="section">
+    <div class="container">
+      <h2>サービス</h2>
