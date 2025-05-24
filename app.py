@@ -2,6 +2,8 @@ import os
 from flask import Flask, render_template, request, redirect, flash
 import smtplib
 from email.mime.text import MIMEText
+from email.header import Header
+
 
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'  # フォーム送信メッセージ用
@@ -16,7 +18,7 @@ def home():
         subject = "【MyPath】お問い合わせが届きました"
         body = f"名前: {name}\nメール: {email}\n内容:\n{message}"
         msg = MIMEText(body, 'plain', 'utf-8')
-        msg["Subject"] = subject
+        msg["Subject"] = Header(subject, 'utf-8')
         msg["From"] = email
         msg["To"] = "aandkofspade@gmail.com"
 
