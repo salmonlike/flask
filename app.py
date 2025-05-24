@@ -15,7 +15,7 @@ def home():
 
         subject = "【MyPath】お問い合わせが届きました"
         body = f"名前: {name}\nメール: {email}\n内容:\n{message}"
-        msg = MIMEText(body)
+        msg = MIMEText(body, 'plain', 'utf-8')
         msg["Subject"] = subject
         msg["From"] = email
         msg["To"] = "aandkofspade@gmail.com"
