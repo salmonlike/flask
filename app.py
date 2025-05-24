@@ -24,7 +24,8 @@ def home():
         msg["Subject"] = Header(subject, "utf-8")
 
         sender_addr  = strip_nbsp(os.environ.get("EMAIL_USER", ""))
-        display_name = str(Header("MyPathサイト", "utf-8"))
+        raw_display_name = "MyPathサイト"
+        display_name = str(Header(strip_nbsp(raw_display_name), "utf-8"))
         msg["From"]  = formataddr((display_name, sender_addr))
 
         msg["To"]       = "aandkofspade@gmail.com"
