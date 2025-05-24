@@ -127,3 +127,33 @@ body {
     padding: 15px 0;
   }
   
+  /* もともとのCSSそのまま残す部分（省略して記載） */
+/* ... */
+
+/* ▼ 元のCSSここまで ▼ */
+
+/* ホームページ用のヒーローセクション */
+#hero-home {
+    background: #f9d71c; /* 希望カラーに書き換えてOK */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    text-align: center;
+  }
+  
+  #hero-home h1 {
+    font-size: 6rem; /* 大きな文字サイズ */
+    font-weight: bold;
+    margin: 0;
+    opacity: 0; /* フェードイン前は透明 */
+    animation: fadeIn 2s ease forwards; /* 2秒でフェードイン */
+  }
+  
+  /* フェードインのアニメーション定義 */
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+  
