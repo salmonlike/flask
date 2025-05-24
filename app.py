@@ -3,6 +3,7 @@ from flask import Flask, render_template, request, redirect, flash
 import smtplib
 from email.mime.text import MIMEText
 from email.header import Header
+from email.utils import formataddr
 
 
 app = Flask(__name__)
@@ -16,11 +17,23 @@ def home():
         message = request.form["message"]
 
         subject = "【MyPath】お問い合わせが届きました"
-        body = f"名前: {name}\nメール: {email}\n内容:\n{message}"
+        body    = f"名前: {name}\nメール: {email}\n内容:\n{message}"
+
+# 本文：UTF-8
         msg = MIMEText(body, 'plain', 'utf-8')
-        msg["Subject"] = Header(subject, 'utf-8')
-        msg["From"] = email
-        msg["To"] = "aandkofspade@gmail.com"
+
+# 件名：UTF-8
+        msg['Subject'] = Header(subject, 'utf-8')
+
+# From は Gmail アカウント（ASCII のみ）に固定
+        sender_addr = os.environ.get("EMAIL_USER")          # 例: mypath.info@gmail.com
+        msg['From']  = formataddr(("MyPathサイト", sender_addr))
+
+# To は受信用アドレス（ASCII のみ）
+        msg['To'] = "aandkofspade@gmail.com"
+
+# 返信先にユーザーのメールを入れる（ここは通常 ASCII だけ）
+        msg['Reply-To'] = email
 
         try:
             smtp_server = smtplib.SMTP_SSL("smtp.gmail.com", 465)
