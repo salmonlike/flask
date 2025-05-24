@@ -43,25 +43,38 @@ body {
   /* ------------------------------------------------------ */
   
   /* === ホームページ専用スタイル =========================== */
-  #hero-home {
-    background: #2f22b8;          /* ← 好きな背景色に変更OK */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 90vh;
-    text-align: center;
+/* ===== ホーム専用ヒーロー ===== */
+#hero-home{
+    background:#2b2f90;
+    display:flex;
+    flex-direction:column;          /* 縦に積む */
+    justify-content:center;
+    align-items:center;
+    height:90vh;
+    text-align:center;
+    overflow:hidden;                /* 左からはみ出す文字を隠す */
   }
   
-  #hero-home h1 {
-    font-size: 6rem;              /* 大きな会社名 */
-    font-weight: bold;
-    margin: 0;
-    opacity: 0;                   /* フェードイン前は透明 */
-    animation: fadeIn 2s ease forwards;
+  /* 共通アニメーション */
+  .slide-fade{
+    transform:translateX(-100%);
+    opacity:0;
+    animation:slideFade 3s ease forwards;
   }
   
-  /* フェードインのアニメーション */
-  @keyframes fadeIn {
-    to { opacity: 1; }
+  /* サブキャッチ用に 0.3 秒あとから開始 */
+  .slide-fade.delay{
+    animation-delay:1s;
   }
+  
+  @keyframes slideFade{
+    to{
+      transform:translateX(0);
+      opacity:1;
+    }
+  }
+  
+  /* 見た目調整 */
+  .brand   { font-size:7em; font-weight:bold; margin:0; color:rgb(0, 0, 0); }
+  .tagline { font-size:2.5rem; margin-top:10px; color:rgb(0, 0, 0); }
   
