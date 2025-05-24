@@ -1,63 +1,81 @@
+/* ベース設定 */
 body {
+    font-family: sans-serif;
     margin: 0;
-    font-family: 'Helvetica Neue', sans-serif;
-    background: linear-gradient(to bottom, #f7f9fc, #e0e7ef);
-    color: #222;
-}
-
-header {
-    background: linear-gradient(to right, #001f3f, #0074D9);
-    padding: 10px 20px;
+    color: #333;
+    background-color: #f9f9f9;
+  }
+  
+  header {
+    background-color: #001f3f;
     color: white;
+    padding: 10px 20px;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-}
-
-.logo {
-    height: 50px;
-}
-
-nav a {
+    align-items: center;
+  }
+  
+  header h1 {
+    font-size: 1.5rem;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    margin-left: 20px;
+  }
+  
+  nav a {
     color: white;
     text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
-}
-
-section {
-    padding: 60px 20px;
+  }
+  
+  section {
+    padding: 40px 20px;
     max-width: 1000px;
     margin: auto;
-}
-
-#hero {
-    background: linear-gradient(to right, #0074D9, #00aaff);
-    color: white;
-    padding: 100px 20px;
-    text-align: center;
-}
-
-form input, form textarea {
+  }
+  
+  h2 {
+    margin-bottom: 10px;
+  }
+  
+  .photo-placeholder {
     width: 100%;
-    padding: 12px;
-    margin: 10px 0;
-    border-radius: 5px;
-    border: 1px solid #aaa;
-}
-
-form button {
-    padding: 12px 20px;
-    background-color: #0074D9;
+    height: 200px;
+    background-color: black; /* 画像の代わりに黒ボックス */
+    margin-bottom: 20px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  form input,
+  form textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 1rem;
+  }
+  
+  form button {
+    padding: 10px;
+    background-color: #0074d9;
     color: white;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
-}
-
-footer {
+  }
+  
+  footer {
     background-color: #001f3f;
     color: white;
     text-align: center;
-    padding: 20px;
-}
+    padding: 10px 0;
+  }
+  
