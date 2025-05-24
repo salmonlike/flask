@@ -3,24 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <title>MyPath</title>
+  <!-- 既存 CSS を読み込み -->
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
 
+  <!-- ヘッダー（既存） -->
   <header>
-    <div class="logo">MyPath</div>
-    <nav>
-      <a href="/about">会社概要</a>
-      <a href="/services">事業内容</a>
-      <a href="/contact">お問い合わせ</a>
-    </nav>
+    <div class="container">
+      <h1>MyPath</h1>
+      <nav>
+        <ul>
+          <li><a href="{{ url_for('about') }}">会社概要</a></li>
+          <li><a href="{{ url_for('services') }}">事業内容</a></li>
+          <li><a href="{{ url_for('contact') }}">お問い合わせ</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
+  <!-- ホーム専用ヒーロー -->
   <main>
-    <section class="hero">
+    <section id="hero-home">
       <h1 class="fade-in">MyPath</h1>
     </section>
   </main>
+
+  <!-- フッター（必要なら追加） -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 MyPath. All rights reserved.</p>
+    </div>
+  </footer>
 
 </body>
 </html>
