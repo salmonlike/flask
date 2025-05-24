@@ -44,7 +44,7 @@ body {
   
   /* === ホームページ専用スタイル =========================== */
   #hero-home {
-    background: #f9d71c;          /* ← 好きな背景色に変更OK */
+    background: #2f22b8;          /* ← 好きな背景色に変更OK */
     display: flex;
     justify-content: center;
     align-items: center;
