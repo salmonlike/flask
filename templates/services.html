@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>MyPath トップページ</title>
+  <title>事業内容 - MyPath</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
@@ -11,18 +11,19 @@
       <h1>MyPath</h1>
       <nav>
         <ul>
+          <li><a href="{{ url_for('home') }}">トップ</a></li>
           <li><a href="{{ url_for('about') }}">会社概要</a></li>
-          <li><a href="{{ url_for('services') }}">事業内容</a></li>
           <li><a href="{{ url_for('contact') }}">お問い合わせ</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <section id="hero">
-    <div class="hero-content">
-      <h2>あなたの成長を支援するパートナー</h2>
-      <p>挑戦を全力で応援します。</p>
+  <section class="section">
+    <div class="container">
+      <h2>事業内容</h2>
+      <p>営業コンサルティング・AIツール開発・教育研修を提供します。</p>
+      <div class="photo-placeholder"></div>
     </div>
   </section>
 

@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>MyPath トップページ</title>
+  <title>会社概要 - MyPath</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
@@ -11,7 +11,7 @@
       <h1>MyPath</h1>
       <nav>
         <ul>
-          <li><a href="{{ url_for('about') }}">会社概要</a></li>
+          <li><a href="{{ url_for('home') }}">トップ</a></li>
           <li><a href="{{ url_for('services') }}">事業内容</a></li>
           <li><a href="{{ url_for('contact') }}">お問い合わせ</a></li>
         </ul>
@@ -19,10 +19,10 @@
     </div>
   </header>
 
-  <section id="hero">
-    <div class="hero-content">
-      <h2>あなたの成長を支援するパートナー</h2>
-      <p>挑戦を全力で応援します。</p>
+  <section class="section">
+    <div class="container">
+      <h2>会社概要</h2>
+      <p>MyPathは、企業や個人の成長を支援する会社です。</p>
     </div>
   </section>
 
