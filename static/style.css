@@ -99,3 +99,61 @@ footer {
     opacity: 0.7;
   }
   
+  /* お問い合わせページ */
+.contact {
+    max-width: 600px;
+    margin: 60px auto;
+    padding: 40px 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    text-align: center;
+  }
+  
+  .contact h1 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #001f3f; /* 紺色 */
+  }
+  
+  .contact .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .contact input,
+  .contact textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+  }
+  
+  .contact input:focus,
+  .contact textarea:focus {
+    border-color: #0074d9; /* 青色強調 */
+    outline: none;
+  }
+  
+  .contact button {
+    background: linear-gradient(135deg, #001f3f, #0074d9);
+    color: #fff;
+    border: none;
+    padding: 14px 30px;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .contact button:hover {
+    background: linear-gradient(135deg, #003366, #005fa3);
+  }
+  
+  @media (max-width: 600px) {
+    .contact {
+      margin: 30px 10px;
+    }
+  }
+  

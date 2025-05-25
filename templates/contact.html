@@ -1,40 +1,43 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <title>お問い合わせ - MyPath</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <meta charset="UTF-8" />
+  <title>お問い合わせ | MyPath</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
 </head>
 <body>
+
   <header>
-    <div class="container">
-      <h1>MyPath</h1>
-      <nav>
-        <ul>
-          <li><a href="{{ url_for('home') }}">トップ</a></li>
-          <li><a href="{{ url_for('about') }}">会社概要</a></li>
-          <li><a href="{{ url_for('services') }}">事業内容</a></li>
-        </ul>
-      </nav>
-    </div>
+    <div class="logo">MyPath</div>
+    <nav>
+      <a href="/">トップ</a>
+      <a href="/about">会社概要</a>
+      <a href="/services">事業内容</a>
+      <a href="/contact">お問い合わせ</a>
+    </nav>
   </header>
 
-  <section class="section">
-    <div class="container">
-      <h2>お問い合わせ</h2>
+  <main>
+    <section class="contact">
+      <h1>お問い合わせ</h1>
       <form method="post">
-        <input type="text" name="name" placeholder="お名前" required>
-        <input type="email" name="email" placeholder="メールアドレス" required>
-        <textarea name="message" placeholder="お問い合わせ内容" required></textarea>
+        <div class="form-group">
+          <input type="text" name="name" placeholder="お名前" required />
+        </div>
+        <div class="form-group">
+          <input type="email" name="email" placeholder="メールアドレス" required />
+        </div>
+        <div class="form-group">
+          <textarea name="message" placeholder="お問い合わせ内容" rows="5" required></textarea>
+        </div>
         <button type="submit">送信</button>
       </form>
-    </div>
-  </section>
+    </section>
+  </main>
 
   <footer>
-    <div class="container">
-      <p>&copy; 2025 MyPath. All rights reserved.</p>
-    </div>
+    &copy; 2025 MyPath. All rights reserved.
   </footer>
+
 </body>
 </html>
