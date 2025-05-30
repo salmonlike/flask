@@ -1,4 +1,6 @@
-/* === 既存 CSS（そのまま） ============================== */
+/* -------------------------------------------------------
+   0. ベース設定
+------------------------------------------------------- */
 body {
     font-family: 'Helvetica Neue', sans-serif;
     margin: 0;
@@ -6,6 +8,7 @@ body {
     color: #333;
   }
   
+  /* 汎用コンテナ */
   .container {
     width: 90%;
     max-width: 1200px;
@@ -13,17 +16,23 @@ body {
     padding: 20px;
   }
   
-  /* ヘッダー */
+  /* -------------------------------------------------------
+     1. ヘッダー
+  ------------------------------------------------------- */
   header {
-    background-color: #001f3f;
+    background-color: #001f3f;      /* 紺色ベース */
     color: #fff;
   }
+  
   header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  header h1 { font-size: 1.8rem; }
+  
+  header h1 {
+    font-size: 1.8rem;
+  }
   
   header nav ul {
     list-style: none;
@@ -31,170 +40,140 @@ body {
     margin: 0;
     padding: 0;
   }
+  
   header nav li { margin-left: 20px; }
+  
   header nav a {
     color: #fff;
     text-decoration: none;
     transition: opacity 0.3s;
   }
+  
   header nav a:hover { opacity: 0.7; }
   
-  /* ほか既存セクション、フォーム、フッターなど (省略せず全部残す) */
-  /* ------------------------------------------------------ */
-  
-  /* === ホームページ専用スタイル =========================== */
-/* ===== ホーム専用ヒーロー ===== */
-#hero-home{
-    background:#2b2f90;
-    display:flex;
-    flex-direction:column;          /* 縦に積む */
-    justify-content:center;
-    align-items:center;
-    height:90vh;
-    text-align:center;
-    overflow:hidden;                /* 左からはみ出す文字を隠す */
+  /* -------------------------------------------------------
+     2. ホームページ専用ヒーロー
+  ------------------------------------------------------- */
+  #hero-home {
+    background: #2b2f90;            /* 背景カラー（自由に変更可） */
+    display: flex;
+    flex-direction: column;         /* 会社名＋サブキャッチを縦積み */
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    text-align: center;
+    overflow: hidden;               /* スライド開始時のはみ出しを隠す */
   }
   
-  /* 共通アニメーション */
-  .slide-fade{
-    transform:translateX(-100%);
-    opacity:0;
-    animation:slideFade 3s ease forwards;
+  /* スライド＋フェード共通クラス */
+  .slide-fade {
+    transform: translateX(-100%);
+    opacity: 0;
+    animation: slideFade 3s ease forwards;
   }
   
-  /* サブキャッチ用に 0.3 秒あとから開始 */
-  .slide-fade.delay{
-    animation-delay:1s;
-  }
+  /* サブキャッチを少し遅らせる場合 */
+  .slide-fade.delay { animation-delay: 1s; }
   
-  @keyframes slideFade{
-    to{
-      transform:translateX(0);
-      opacity:1;
+  /* スライドしながらフェードイン */
+  @keyframes slideFade {
+    to {
+      transform: translateX(0);
+      opacity: 1;
     }
   }
   
-  /* 見た目調整 */
-  .brand   { font-size:7em; font-weight:bold; margin:0; color:rgb(0, 0, 0); }
-  .tagline { font-size:2.5rem; margin-top:10px; color:rgb(0, 0, 0); }
+  /* タイトル・サブキャッチのビジュアル */
+  .brand   { font-size: 7rem; font-weight: bold; margin: 0; color: #000; }
+  .tagline { font-size: 2.5rem; margin-top: 10px; color: #000; }
   
-  /* ───────── フッター ───────── */
-footer {
-    background-color: #002850;  /* 紺色ベース */
-    color: #fff;                /* 文字は白 */
-    text-align: center;         /* 中央寄せ */
-    padding: 20px 0;            /* 上下の余白だけ 20px */
-    font-size: 0.9rem;          /* 少し小さめの文字 */
+  /* -------------------------------------------------------
+     3. フッター
+  ------------------------------------------------------- */
+  footer {
+    background-color: #002850;      /* 濃い紺 */
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9rem;
     line-height: 1.4;
   }
   
-  /* もしフッター内にリンクを置く場合は色を統一 */
   footer a {
     color: #fff;
     text-decoration: none;
     transition: opacity 0.3s;
   }
   
-  footer a:hover {
-    opacity: 0.7;
-  }
+  footer a:hover { opacity: 0.7; }
   
-  /* お問い合わせページ */
-.contact {
+  /* -------------------------------------------------------
+     4. お問い合わせページ – カードレイアウト
+  ------------------------------------------------------- */
+  .contact {
     max-width: 600px;
     margin: 60px auto;
     padding: 40px 20px;
     background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     text-align: center;
   }
   
   .contact h1 {
     font-size: 2rem;
     margin-bottom: 30px;
-    color: #001f3f; /* 紺色 */
+    color: #001f3f;
   }
   
-  .contact .form-group {
-    margin-bottom: 20px;
+  /* -------------------------------------------------------
+     5. フォーム要素（全ページ共通）
+  ------------------------------------------------------- */
+  form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;              /* 幅を統一 */
+    margin: 0 auto;                /* 中央寄せ */
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
   
-  .contact input,
-  .contact textarea {
+  form input,
+  form textarea {
     width: 100%;
-    padding: 12px;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    font-size: 1rem;
     border: 1px solid #ccc;
     border-radius: 4px;
-    font-size: 1rem;
-    transition: border-color 0.3s;
+    box-sizing: border-box;        /* パディング込みで幅計算 */
+    transition: border-color 0.3s, box-shadow 0.3s;
   }
   
-  .contact input:focus,
-  .contact textarea:focus {
-    border-color: #0074d9; /* 青色強調 */
+  form input:focus,
+  form textarea:focus {
+    border-color: #0074d9;
+    box-shadow: 0 0 0 3px rgba(0, 116, 217, 0.2);
     outline: none;
   }
   
-  .contact button {
-    background: linear-gradient(135deg, #001f3f, #0074d9);
-    color: #fff;
-    border: none;
-    padding: 14px 30px;
-    border-radius: 4px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background 0.3s;
-  }
-  
-  .contact button:hover {
-    background: linear-gradient(135deg, #003366, #005fa3);
-  }
-  
-  @media (max-width: 600px) {
-    .contact {
-      margin: 30px 10px;
-    }
-  }
-  
-  /* お問い合わせページのフォーム */
-/* お問い合わせフォーム全体 */
-form {
-    display: flex;
-    flex-direction: column;
-    max-width: 400px;     /* ちょうど良い幅に統一 */
-    margin: 0 auto;       /* 中央寄せ */
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* 軽い影で立体感 */
-    border-radius: 8px;
-    background: #fff;     /* 白背景 */
-  }
-  
-  /* 各フォーム要素 */
-  form input,
-  form textarea {
-    margin-bottom: 15px;
-    padding: 10px;
-    font-size: 1rem;
-    border: 1px solid #ccc; /* 薄いグレーの枠 */
-    border-radius: 4px;
-    width: 100%;            /* 幅を完全に統一！ */
-    box-sizing: border-box; /* パディング分を含めて幅を計算 */
-  }
-  
-  /* 送信ボタン */
   form button {
-    background: #0074d9; /* 青色 */
+    background: #0074d9;
     color: #fff;
     border: none;
     padding: 12px;
     border-radius: 4px;
+    font-size: 1rem;
     cursor: pointer;
     transition: background 0.3s;
   }
   
-  form button:hover {
-    background: #005fa3; /* 濃い青色 */
-  }
+  form button:hover { background: #005fa3; }
   
+  /* スマホ対応 */
+  @media (max-width: 600px) {
+    .contact { margin: 30px 10px; }
+  }
   
