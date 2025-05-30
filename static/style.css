@@ -158,46 +158,43 @@ footer {
   }
   
   /* お問い合わせページのフォーム */
+/* お問い合わせフォーム全体 */
 form {
     display: flex;
     flex-direction: column;
-    max-width: 500px;
-    margin: auto;
-    background: #fff;
+    max-width: 400px;     /* ちょうど良い幅に統一 */
+    margin: 0 auto;       /* 中央寄せ */
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* 軽い影で立体感 */
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    padding: 30px;
+    background: #fff;     /* 白背景 */
   }
   
+  /* 各フォーム要素 */
   form input,
   form textarea {
-    margin-bottom: 20px;
-    padding: 12px 15px;
+    margin-bottom: 15px;
+    padding: 10px;
     font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    outline: none;
-    transition: border-color 0.3s, box-shadow 0.3s;
+    border: 1px solid #ccc; /* 薄いグレーの枠 */
+    border-radius: 4px;
+    width: 100%;            /* 幅を完全に統一！ */
+    box-sizing: border-box; /* パディング分を含めて幅を計算 */
   }
   
-  form input:focus,
-  form textarea:focus {
-    border-color: #0074d9;
-    box-shadow: 0 0 0 3px rgba(0, 116, 217, 0.2);
-  }
-  
+  /* 送信ボタン */
   form button {
-    background-color: #0074d9;
+    background: #0074d9; /* 青色 */
     color: #fff;
     border: none;
     padding: 12px;
-    border-radius: 6px;
+    border-radius: 4px;
     cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s;
+    transition: background 0.3s;
   }
   
   form button:hover {
-    background-color: #005fa3;
+    background: #005fa3; /* 濃い青色 */
   }
+  
   
