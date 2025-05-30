@@ -160,7 +160,7 @@ body {
   }
   
   form button {
-    background: #0074d9;
+    background: #030463;
     color: #fff;
     border: none;
     padding: 12px;
@@ -171,6 +171,23 @@ body {
   }
   
   form button:hover { background: #005fa3; }
+
+  /* ───────── お問い合わせページ | 会社情報ブロック ───────── */
+.contact-info {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  .contact-info a {
+    color: #001f3f;          /* 紺色リンク  */
+    text-decoration: none;
+    transition: opacity 0.3s;
+  }
+  
+  .contact-info a:hover { opacity: 0.7; }
+  
   
   /* スマホ対応 */
   @media (max-width: 600px) {
