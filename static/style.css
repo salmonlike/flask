@@ -194,3 +194,92 @@ body {
     .contact { margin: 30px 10px; }
   }
   
+  /* ───────── 会社概要ページ ───────── */
+
+/* ① ヒーロー */
+#about-hero {
+    background: url("../static/logo_about.jpg") center/contain no-repeat, #002850; /* ← 添付画像を静的フォルダに置く */
+    color: #fff;
+    height: 60vh;                   /* 1スクロール目の約半分 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #about-hero h2 {
+    font-size: 3rem;
+    letter-spacing: 2px;
+    text-align: center;
+  }
+  
+  /* 共通セクション */
+  .about-section {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 0 20px;
+  }
+  
+  /* ② 会社概要テーブル */
+  .company-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .company-table th,
+  .company-table td {
+    border-bottom: 1px solid #e0e0e0;
+    padding: 12px;
+    text-align: left;
+  }
+  .company-table th {
+    width: 140px;
+    background: #f6f8fb;
+    color: #001f3f;
+  }
+  
+  /* ③ 事業内容リスト */
+  .business-list {
+    list-style: none;
+    padding: 0;
+  }
+  .business-list li {
+    margin-bottom: 12px;
+    padding-left: 1.2em;
+    position: relative;
+  }
+  .business-list li::before {
+    content: "●";
+    color: #0074d9;
+    position: absolute;
+    left: 0;
+  }
+  
+  /* ④ 縦タイムライン */
+  .timeline {
+    list-style: none;
+    padding: 0;
+    margin-left: 0.5em;
+  }
+  .timeline li {
+    margin-bottom: 12px;
+    padding-left: 2.8em;
+    position: relative;
+  }
+  .timeline .tl-year {
+    font-weight: bold;
+    color: #0074d9;
+    width: 80px;
+    display: inline-block;
+  }
+  .timeline .tl-text {
+    color: #333;
+  }
+  .timeline li::before {
+    content: "";
+    position: absolute;
+    left: 10px;
+    top: 2px;
+    width: 8px;
+    height: 8px;
+    background: #0074d9;
+    border-radius: 50%;
+  }
+  

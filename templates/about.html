@@ -1,35 +1,70 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>会社概要 - MyPath</title>
-  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
 </head>
+
 <body>
+  <!-- 共通ヘッダー -->
   <header>
     <div class="container">
       <h1>MyPath</h1>
       <nav>
         <ul>
-          <li><a href="{{ url_for('home') }}">トップ</a></li>
-          <li><a href="{{ url_for('services') }}">事業内容</a></li>
-          <li><a href="{{ url_for('contact') }}">お問い合わせ</a></li>
+          <li><a href="/">トップ</a></li>
+          <li><a href="/about">会社概要</a></li>
+          <li><a href="/services">事業内容</a></li>
+          <li><a href="/contact">お問い合わせ</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <section class="section">
-    <div class="container">
-      <h2>会社概要</h2>
-      <p>MyPathは、企業や個人の成長を支援する会社です。</p>
-    </div>
-  </section>
+  <main>
+    <!-- ① ヒーロー -->
+    <section id="about-hero">
+      <div class="hero-inner">
+        <h2>for AI trivial result</h2>
+        <!-- 背景ロゴは CSS の background で設定 -->
+      </div>
+    </section>
+
+    <!-- ② 会社概要テーブル -->
+    <section class="about-section">
+      <h3>会社概要</h3>
+      <table class="company-table">
+        <tbody>
+          <tr><th>社名</th><td>MyPath</td></tr>
+          <tr><th>代表者</th><td>代表</td></tr>
+          <tr><th>所在地</th><td>東京都足立区</td></tr>
+          <tr><th>設立</th><td>2022 年 6 月</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ③ 事業内容 -->
+    <section class="about-section">
+      <h3>事業内容</h3>
+      <ul class="business-list">
+        <li><strong>オンライン日本語学習サービス</strong>― 世界へ日本語会話を提供</li>
+        <li><strong>マッサージ店</strong>― 山口県周南市で店舗運営</li>
+        <li><strong>NPO 日本語アシスト</strong>― ベトナム人来日支援</li>
+      </ul>
+    </section>
+
+    <!-- ④ 沿革（タイムライン） -->
+    <section class="about-section">
+      <h3>沿革</h3>
+      <ul class="timeline">
+        <li><span class="tl-year">2022</span><span class="tl-text">MyPath 設立</span></li>
+      </ul>
+    </section>
+  </main>
 
   <footer>
-    <div class="container">
-      <p>&copy; 2025 MyPath. All rights reserved.</p>
-    </div>
+    &copy; 2025 MyPath. All rights reserved.
   </footer>
 </body>
 </html>
