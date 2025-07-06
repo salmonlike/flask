@@ -200,7 +200,7 @@ body {
 #about-hero {
     background: url("../static/logo_about.jpg") center/contain no-repeat, #002850; /* ← 添付画像を静的フォルダに置く */
     color: #fff;
-    height: 20vh;                   /* 1スクロール目の約半分 */
+    height: 15vh;                   /* 1スクロール目の約半分 */
     display: flex;
     justify-content: center;
     align-items: center;
