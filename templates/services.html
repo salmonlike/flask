@@ -1,37 +1,68 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>事業内容 - MyPath</title>
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
+
+  <!-- 共通ヘッダー -->
   <header>
     <div class="container">
       <h1>MyPath</h1>
       <nav>
         <ul>
-          <li><a href="{{ url_for('home') }}">トップ</a></li>
-          <li><a href="{{ url_for('about') }}">会社概要</a></li>
-          <li><a href="{{ url_for('services') }}">事業内容</a></li>
-          <li><a href="{{ url_for('contact') }}">お問い合わせ</a></li>
+          <li><a href="/">トップ</a></li>
+          <li><a href="/about">会社概要</a></li>
+          <li><a href="/services">事業内容</a></li>
+          <li><a href="/contact">お問い合わせ</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <section class="section">
-    <div class="container">
-      <h2>事業内容</h2>
-      <p>このページは更新中です。</p>
-      <div class="photo-placeholder"></div>
-    </div>
-  </section>
+  <main>
+    <!-- ① ヒーロー（1スクロール目） -->
+    <section class="services-hero">
+      <h2>OUR&nbsp;SERVICES</h2>
+      <p>言語 × 健康 × 支援 ―&nbsp;<br>3つの領域で価値を提供します。</p>
+    </section>
+
+    <!-- ② サービスカード（2スクロール目） -->
+    <section class="services-grid">
+      <!-- オンライン日本語学習 -->
+      <article class="service-card">
+        <img src="{{ url_for('static', filename='images/service_lang.jpg') }}" alt="オンライン日本語学習">
+        <h3>オンライン日本語学習</h3>
+        <p>世界中の学習者にリアルタイム会話と AI 個別フィードバックを提供。</p>
+      </article>
+
+      <!-- マッサージ店 -->
+      <article class="service-card">
+        <img src="{{ url_for('static', filename='images/service_massage.jpg') }}" alt="マッサージ店">
+        <h3>マッサージ店（周南）</h3>
+        <p>地元密着でリラクゼーションとボディケアを提供する実店舗。</p>
+      </article>
+
+      <!-- NPO 日本語アシスト -->
+      <article class="service-card">
+        <img src="{{ url_for('static', filename='images/service_npo.jpg') }}" alt="日本語アシスト NPO">
+        <h3>NPO 日本語アシスト</h3>
+        <p>ベトナム人の来日・就労を語学と生活面からサポート。</p>
+      </article>
+    </section>
+
+    <!-- ③ CTA セクション（3スクロール目） -->
+    <section class="services-cta">
+      <h2>もっと詳しく知りたい方へ</h2>
+      <p>各サービスの資料ダウンロードやコラボレーションのご相談など<br>お気軽にお問い合わせください。</p>
+      <a href="/contact" class="cta-btn">お問い合わせへ</a>
+    </section>
+  </main>
 
   <footer>
-    <div class="container">
-      <p>&copy; 2025 MyPath. All rights reserved.</p>
-    </div>
+    &copy; 2025 MyPath. All rights reserved.
   </footer>
 </body>
 </html>

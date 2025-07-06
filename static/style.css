@@ -283,3 +283,94 @@ body {
     border-radius: 50%;
   }
   
+  /* -------------------------------------------------------
+   事業内容ページ専用
+------------------------------------------------------- */
+
+/* ① ヒーロー */
+.services-hero {
+  height: 90vh;                                  /* 1スクロール分 */
+  background: linear-gradient(135deg,#001f3f,#004c9f);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+}
+.services-hero h2 {
+  font-size: 4rem;
+  letter-spacing: 4px;
+  margin-bottom: 20px;
+}
+.services-hero p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* ② サービスカードグリッド */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+  gap: 40px;
+  max-width: 1000px;
+  margin: 80px auto;
+  padding: 0 20px;
+}
+.service-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+.service-card:hover { transform: translateY(-6px); }
+.service-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.service-card h3 {
+  font-size: 1.4rem;
+  margin: 16px 20px 8px;
+  color: #001f3f;
+}
+.service-card p {
+  font-size: 0.95rem;
+  margin: 0 20px 20px;
+  color: #444;
+}
+
+/* ③ CTA セクション */
+.services-cta {
+  background: #f6f8fb;
+  text-align: center;
+  padding: 80px 20px;
+}
+.services-cta h2 {
+  font-size: 2.2rem;
+  color: #001f3f;
+  margin-bottom: 20px;
+}
+.services-cta p {
+  font-size: 1rem;
+  margin-bottom: 30px;
+  line-height: 1.7;
+}
+.cta-btn {
+  display: inline-block;
+  background: #0074d9;
+  color: #fff;
+  padding: 14px 40px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+.cta-btn:hover { background: #005fa3; }
+
+/* スマホ幅調整 */
+@media (max-width: 600px) {
+  .services-hero h2 { font-size: 2.8rem; }
+  .services-cta h2 { font-size: 1.8rem; }
+}
