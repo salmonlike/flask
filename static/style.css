@@ -291,7 +291,7 @@ body {
 
 /* ① ヒーロー  ------------------------------------------------ */
 .services-hero {
-  height: 60vh;                                     /* ほど良い高さに調整 */
+  height: 30vh;                                     /* ほど良い高さに調整 */
   background: linear-gradient(135deg, #001f3f, #004c9f);
   color: #fff;
   display: flex;
