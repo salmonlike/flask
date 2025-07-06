@@ -209,6 +209,7 @@ body {
     font-size: 3rem;
     letter-spacing: 2px;
     text-align: center;
+    font-family: 'Great Vibes', cursive;   /* ★ここを追加 */
   }
   
   /* 共通セクション */
