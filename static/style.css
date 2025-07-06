@@ -311,15 +311,16 @@ body {
 }
 
 /* ② サービスカードグリッド  ---------------------------------- */
+/* ② サービスカードグリッド */
 .services-grid {
-  --card-gap: 40px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: var(--card-gap);
+  grid-template-columns: repeat(2, minmax(260px, 1fr));  /* ← ここを変更 */
+  gap: 40px;
   max-width: 1100px;
   margin: 80px auto;
   padding: 0 20px;
 }
+
 
 .service-card {
   background: #fff;
