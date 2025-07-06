@@ -289,7 +289,7 @@ body {
 
 /* ① ヒーロー */
 .services-hero {
-  height: 90vh;                                  /* 1スクロール分 */
+  height: 50vh;                                  /* 1スクロール分 */
   background: linear-gradient(135deg,#001f3f,#004c9f);
   color: #fff;
   display: flex;
