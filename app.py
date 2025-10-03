@@ -51,7 +51,7 @@ def contact():
         msg["From"]   = formataddr((display_name, sender_addr))
 
         # ── 宛先（To）+ 返信先（Reply-To）
-        msg["To"]       = "aandkofspade@gmail.com"
+        msg["To"]       = "kanta@crafia-hd.com"
         msg["Reply-To"] = email
 
         # ── 送信
